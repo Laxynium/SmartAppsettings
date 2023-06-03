@@ -9,7 +9,7 @@ internal static class TemplatesFinder
         IConfigurationRoot configuration,
         Func<string, bool> matchKey)
     {
-        var flatten = TreeWalker.IterativeFlatten(configuration);
+        var flatten = TreeWalker.Flatten(configuration);
         var templates = flatten
             .Where(x => matchKey(x.Key))
             .ToList().AsReadOnly();
@@ -18,7 +18,7 @@ internal static class TemplatesFinder
 
     private static class TreeWalker
     {
-        public static IReadOnlyList<IConfigurationSection> IterativeFlatten(IConfigurationRoot root)
+        public static IReadOnlyList<IConfigurationSection> Flatten(IConfigurationRoot root)
         {
             var result = new List<IConfigurationSection>();
             var queue = new Queue<IConfigurationSection>(root.GetChildren());
@@ -32,27 +32,6 @@ internal static class TemplatesFinder
             }
 
             return result;
-        }
-
-        public static IReadOnlyList<IConfigurationSection> RecursiveFlatten(IConfigurationRoot root)
-        {
-            var result = new List<IConfigurationSection>();
-            foreach (var c in root.GetChildren())
-            {
-                Walk(c, result);
-            }
-
-            return result;
-        }
-
-        private static void Walk(IConfigurationSection root, ICollection<IConfigurationSection> result)
-        {
-            result.Add(root);
-            var children = root.GetChildren();
-            foreach (var c in children)
-            {
-                Walk(c, result);
-            }
         }
     }
 }
