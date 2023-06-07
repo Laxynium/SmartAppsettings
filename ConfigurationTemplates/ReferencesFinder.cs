@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace ConfigurationTemplates;
 
-internal static class TemplatesFinder
+internal static class ReferencesFinder
 {
     internal static ReadOnlyCollection<IConfigurationSection> FindTemplates(
         IConfigurationRoot configuration,

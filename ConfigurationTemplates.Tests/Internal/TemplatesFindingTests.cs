@@ -1,11 +1,8 @@
-using System.Collections.ObjectModel;
-using System.Text.Json;
 using FluentAssertions;
-using Microsoft.Extensions.Configuration;
 
-namespace ConfigurationTemplates.Tests;
+namespace ConfigurationTemplates.Tests.Internal;
 
-public class TemplatesFindingTests
+public class TemplatesFindingTests : TestsBase
 {
     [Fact]
     public void finds_templates_on_any_level()
@@ -84,27 +81,5 @@ public class TemplatesFindingTests
         var result = FindTemplates(config, "$.");
 
         result.Should().BeEmpty();
-    }
-
-    private static ReadOnlyCollection<IConfigurationSection> FindTemplates(Stream config, string templateMarker)
-    {
-        var configuration = AConfigurationRoot(config);
-        return TemplatesFinder.FindTemplates(configuration, x => x.StartsWith($"{templateMarker}"));
-    }
-
-    private static Stream AConfig(Dictionary<string, object> dictionary)
-    {
-        var memoryStream = new MemoryStream();
-        JsonSerializer.Serialize(memoryStream, dictionary);
-        memoryStream.Seek(0, SeekOrigin.Begin);
-        return memoryStream;
-    }
-
-    private static IConfigurationRoot AConfigurationRoot(Stream config)
-    {
-        var configuration = new ConfigurationBuilder()
-            .AddJsonStream(config)
-            .Build();
-        return configuration;
     }
 }
