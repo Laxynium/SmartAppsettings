@@ -28,9 +28,9 @@ public class TemplatesFindingTests : TestsBase
         var result = FindTemplates(config, "$.");
 
         result.Should().HaveCount(3);
-        result.Should().Contain(x => x.Key == "$.B");
-        result.Should().Contain(x => x.Key == "$.c");
-        result.Should().Contain(x => x.Key == "$.a");
+        result.Should().Contain(x => x.Key == "$.B" && x.Path == "$.B");
+        result.Should().Contain(x => x.Key == "$.c" && x.Path == "A:$.c");
+        result.Should().Contain(x => x.Key == "$.a" && x.Path == "A:d:1:$.a");
     }
 
     [Fact]
