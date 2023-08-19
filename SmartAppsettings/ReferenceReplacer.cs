@@ -2,7 +2,7 @@
 using CSharpFunctionalExtensions;
 using Microsoft.Extensions.Configuration;
 
-namespace ConfigurationTemplates;
+namespace SmartAppsettings;
 
 internal partial class ReferenceReplacer
 {

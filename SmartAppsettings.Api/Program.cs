@@ -1,4 +1,4 @@
-using ConfigurationTemplates;
+using SmartAppsettings;
 
 var builder = WebApplication.CreateBuilder(args);
 

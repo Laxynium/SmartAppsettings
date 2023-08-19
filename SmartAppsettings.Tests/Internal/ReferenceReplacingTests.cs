@@ -1,6 +1,7 @@
-﻿using FluentAssertions;
+﻿using SmartAppsettings;
+using FluentAssertions;
 
-namespace ConfigurationTemplates.Tests.Internal;
+namespace SmartAppsettings.Tests.Internal;
 
 public class ReferenceReplacingTests : TestsBase
 {

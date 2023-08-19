@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Configuration;
 
-namespace ConfigurationTemplates;
+namespace SmartAppsettings;
 
 internal static partial class ConfigurationReferencesReplacer
 {

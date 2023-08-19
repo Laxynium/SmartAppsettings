@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using Microsoft.Extensions.Configuration;
 
-namespace ConfigurationTemplates;
+namespace SmartAppsettings;
 
 internal static class ReferencesFinder
 {

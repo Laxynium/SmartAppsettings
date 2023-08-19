@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAppsettings", "SmartAppsettings\SmartAppsettings.csproj", "{7049885C-585D-4379-BC34-A7C93E355937}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAppsettings.Api", "SmartAppsettings.Api\SmartAppsettings.Api.csproj", "{7049885C-585D-4379-BC34-A7C93E355937}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationTemplates", "ConfigurationTemplates\ConfigurationTemplates.csproj", "{C7CAF023-3022-47AA-A241-0A026E625607}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAppsettings", "SmartAppsettings\SmartAppsettings.csproj", "{C7CAF023-3022-47AA-A241-0A026E625607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationTemplates.Tests", "ConfigurationTemplates.Tests\ConfigurationTemplates.Tests.csproj", "{C954788A-5621-46C5-8624-9100E73271DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAppsettings.Tests", "SmartAppsettings.Tests\SmartAppsettings.Tests.csproj", "{C954788A-5621-46C5-8624-9100E73271DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

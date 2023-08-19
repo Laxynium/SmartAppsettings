@@ -1,7 +1,8 @@
-﻿using FluentAssertions;
+﻿using SmartAppsettings;
+using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 
-namespace ConfigurationTemplates.Tests.Internal;
+namespace SmartAppsettings.Tests.Internal;
 
 public class ConfigurationReferencesReplacingTests : TestsBase
 {

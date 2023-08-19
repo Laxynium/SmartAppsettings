@@ -1,8 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.Text.Json;
+using SmartAppsettings;
 using Microsoft.Extensions.Configuration;
 
-namespace ConfigurationTemplates.Tests;
+namespace SmartAppsettings.Tests;
 
 public class TestsBase
 {

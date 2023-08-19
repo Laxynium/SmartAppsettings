@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace ConfigurationTemplates.Tests.Internal;
+namespace SmartAppsettings.Tests.Internal;
 
 public class TemplatesFindingTests : TestsBase
 {

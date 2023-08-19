@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace ConfigurationTemplates;
+namespace SmartAppsettings;
 
 public static partial class Extensions
 {
